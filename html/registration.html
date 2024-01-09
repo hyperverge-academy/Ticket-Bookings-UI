@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Ticket Registration</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/media.query.css">
 </head>
 <body>
     <div class="container">
-        <form action="" method="">
+        <form action="" method="" id="registration-form" >
             <h2>Register for Bus Ticket</h2>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+
+            <label for="username">FullName:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+
             <label for="confirm_password">Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" required>
-            <button type="submit">Register</button>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <button type="submit" id="submit-btn">Register</button>
+
+            <div id="response-statuscode"></div>
         </form>
+    
         <p>Already have an account? <a href="/html/login.html">Login here</a></p>
+
+        <div id="output"></div>
+
+        <script src="../js/registration.js"></script>
     </div>
+
 </body>
 </html>
