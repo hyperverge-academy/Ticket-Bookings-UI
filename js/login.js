@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const responseStatusCode = document.getElementById("response-statuscode").innerHTML = resData.message;
             if ( resData.errorCode!== 200) {
             document.getElementById('response-statuscode').style.color = 'red';
-            } return responseStatusCode
+            } 
+            console.log(responseStatusCode)
+            return responseStatusCode
 
   
         } catch (err) {
@@ -42,5 +44,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
   
-  
-    });
+  });
