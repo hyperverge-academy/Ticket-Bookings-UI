@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
           const resData = await res.json();
           console.log(resData);
 
-          const responseStatusCode = document.getElementById("response-statuscode").innerHTML = resData.message.message;
-          if ( resData.message.errorCode!== 200) {
+          const responseStatusCode = document.getElementById("response-statuscode").innerHTML = resData.message;
+          if ( resData.errorCode!== 200) {
           document.getElementById('response-statuscode').style.color = 'red';
           } 
 

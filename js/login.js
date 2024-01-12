@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
             const responseStatusCode = document.getElementById("response-statuscode").innerHTML = resData.message.message;
             if ( resData.message.errorCode!== 200) {
+              console.log(responseStatusCode,"say");
             document.getElementById('response-statuscode').style.color = 'red';
             } 
             console.log(responseStatusCode)
