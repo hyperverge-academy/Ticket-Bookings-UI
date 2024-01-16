@@ -4,7 +4,8 @@
         margin: 50px auto;
     }
 
-    input, button {
+    input,
+    button {
         width: 50%;
     }
 }
