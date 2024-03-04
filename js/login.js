@@ -32,13 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(resData);
 
       const responseStatusCode = document.getElementById("response-statuscode").innerHTML = resData.message.message;
+
       if (resData.message.errorCode !== 200) {
         console.log(responseStatusCode, "say");
         document.getElementById('response-statuscode').style.color = 'red';
+        console.log(responseStatusCode);
+        return responseStatusCode;
+        
+      } else {
+        console.log("role", resData.role);
+        localStorage.setItem("roleData", resData.role);
+        // window.location.replace('/html/profile.html');
       }
-      console.log(responseStatusCode)
-      return responseStatusCode
-
 
     } catch (err) {
       console.log(err.message);
